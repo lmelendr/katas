@@ -1,19 +1,18 @@
 
-const n = 12533
+const n = 1253355
 
-let decimal =""
+let output =""
 
 let j = 0
 
 for (i = n.toString().length - 1 ; i>= 0 ; i--){
     
     if( j!==0 && j % 3 === 0){
-        decimal = n.toString()[i]+',' +decimal
+        output = n.toString()[i]+',' + output
     }else{
-        decimal = n.toString()[i]+decimal
+        output = n.toString()[i]+ output
     }
     j+=1
 }
-
 
 console.log(decimal)
