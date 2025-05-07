@@ -8,6 +8,4 @@ while(n!==1 && n >= 0){
     n === 0 ? n = 2 : f = f*n
     n-=1
 }
-console.log(Math.max(f))
-console.log(f)
 console.log(parseInt(f.toString().match(/[^0]/g).pop()))
