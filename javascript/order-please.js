@@ -15,11 +15,10 @@ function order(words){
     
     let result = []
     
+   // arr.forEach( x => !x ? result : result[parseInt(x.match(/[0-9]/g))[0]-1] = x )
     arr.forEach( x => !x ? result : result[parseInt(x.match(/[0-9]/g))-1] = x )
     
     return result.join(" ")
   }
 
 console.log(order("Thi1s is5 3a T4est")) 
-const words="Thi1s is5 3a T4est"
-console.log(words.split(" "))
