@@ -22,6 +22,7 @@ const str = 'fo99obar0099'
 function incrementString (str) {
     // return incrementedString
     const match = str.match(/[0-9]+$/) //$ coincide con el final de la cadena
+    console.log(match)
     return !match ? str + '1' : str.replace(/[0-9]+$/,addZeros(match[0].length,(parseInt(match[0]) + 1).toString()))
   }
   
