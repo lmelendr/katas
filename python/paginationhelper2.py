@@ -55,7 +55,7 @@ class PaginationHelper:
                     if self.item_count()%self.items_por_page:
                        return self.items_por_page - ((self.items_por_page*self.page_count())-self.item_count())
                     else: return self.items_por_page
-                elif page_index < self.page_count():  
+                elif 0<= page_index and page_index < self.page_count():  
                     return self.items_por_page
                 else: return -1 
             
@@ -76,5 +76,5 @@ class PaginationHelper:
 helper = PaginationHelper(['a','b','c','d','e','f','e','f','e','f'], 10)
 print(helper.item_count())
 print(helper.page_count())
-print(helper.page_item_count(2))
+print(helper.page_item_count(-1))
 print(helper.page_index(-4))
