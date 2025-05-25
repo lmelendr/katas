@@ -49,17 +49,16 @@ class PaginationHelper:
         # this method should return -1 for page_index values that are out of range
         def page_item_count(self, page_index):
             
+            if self.collection and 0<= page_index and page_index < self.page_count() :
             
-            if self.collection:
-                if page_index == self.page_count()-1:
-                    if self.item_count()%self.items_por_page:
-                       return self.items_por_page - ((self.items_por_page*self.page_count())-self.item_count())
-                    else: return self.items_por_page
-                elif 0<= page_index and page_index < self.page_count():  
-                    return self.items_por_page
-                else: return -1 
+                if page_index == self.page_count()-1 and self.item_count()%self.items_por_page:
+                    
+                    return self.items_por_page - ((self.items_por_page*self.page_count())-self.item_count())
+                    
+                else: return self.items_por_page    
+    
+            else: return -1
             
-            else:   return -1
         
         # determines what page an item at the given index is on. Zero based indexes.
         # this method should return -1 for item_index values that are out of range
