@@ -32,4 +32,6 @@ def ips_between(start, end):
     
     return sum([int(x)*(256**(len(ip2)-1-i)) for (i,x) in enumerate(ip2)]) - sum([int(x)*(256**(len(ip1)-1-i)) for (i,x) in enumerate(ip1)])
 
-print(ips_between("10.11.12.13", "10.11.13.0"))
+print(ips_between("10.11.12.14", "10.11.13.0"))
+
+#hice un cambio
